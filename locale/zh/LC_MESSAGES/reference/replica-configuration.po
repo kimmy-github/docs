@@ -13,7 +13,7 @@ msgstr ""
 
 #: ../source/reference/replica-configuration.txt:3
 msgid "Replica Set Configuration"
-msgstr ""
+msgstr "复制集配置"
 
 #: ../source/reference/replica-configuration.txt:13
 msgid ""
