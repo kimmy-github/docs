@@ -13,87 +13,87 @@ msgstr ""
 
 #: ../source/reference/replica-configuration.txt:3
 msgid "Replica Set Configuration"
-msgstr ""
+msgstr "复制集配置字段描述"
 
 #: ../source/reference/replica-configuration.txt:13
 msgid ""
 "You can access the configuration of a :term:`replica set` using the "
 ":method:`rs.conf()` method or the :dbcommand:`replSetGetConfig` command."
 msgstr ""
-
+"获取一个 :term:`replica set` 的配置信息，可以执行 :method:`rs.conf()` 方法或者 :dbcommand:`replSetGetConfig` 命令。"
 #: ../source/includes/replica-set-conf-document-output.rst:1
 msgid ""
 "The following document provides a representation of a replica set "
 "configuration document. The configuration of your replica set may include "
 "only a subset of these settings:"
 msgstr ""
-
+"下面的文档是一个复制集的配置信息的示例，你的复制集可能只包含下面这些设置参数中的子集。"
 #: ../source/reference/replica-configuration.txt:16
 msgid ""
 "To modify the configuration for a replica set, use the "
 ":method:`rs.reconfig()` method, passing a configuration document to the "
 "method. See :method:`rs.reconfig()` for more information."
 msgstr ""
-
+"如果更新复制集的配置参数，可以使用:method:`rs.reconfig()` 方法。要获取更多的信息可以查看 :method:`rs.reconfig()` 。"
 #: ../source/reference/replica-configuration.txt:0
 msgid "On this page"
-msgstr ""
+msgstr "在这个页面上"
 
 #: ../source/reference/replica-configuration.txt:24
 msgid "Replica Set Configuration Document Example"
-msgstr ""
+msgstr "复制集配置文档示例"
 
 #: ../source/reference/replica-configuration.txt:31
 msgid "Replica Set Configuration Fields"
-msgstr ""
+msgstr "复制集配置信息字段说明"
 
 #: ../source/reference/replica-configuration.txt:35
 #: ../source/reference/replica-configuration.txt:118
 msgid "*Type*: string"
-msgstr ""
+msgstr "*Type*: 字符串"
 
 #: ../source/reference/replica-configuration.txt:37
 msgid ""
 "The name of the replica set. Once set, you cannot change the name of a "
 "replica set."
 msgstr ""
-
+"复制集的名称，一旦设定，将无法修改。"
 #: ../source/reference/replica-configuration.txt:40
 msgid ""
 ":rsconf:`_id` *must* be identical to the :setting:`replication.replSetName` "
 "or the value of `--replSet` specified to :program:`mongod` on the command "
 "line."
 msgstr ""
-
+":rsconf:`_id` 必须和 :setting:`replication.replSetName` 或者 `--replSet` 在命令行指定的 :program:`mongod` 保持一致。"
 #: ../source/reference/replica-configuration.txt:0
 msgid "See"
-msgstr ""
+msgstr "See"
 
 #: ../source/reference/replica-configuration.txt:50
 #: ../source/reference/replica-configuration.txt:380
 #: ../source/reference/replica-configuration.txt:395
 msgid "*Type*: int"
-msgstr ""
+msgstr "*Type*: 整型"
 
 #: ../source/reference/replica-configuration.txt:52
 msgid ""
 "An incrementing number used to distinguish revisions of the replica set "
 "configuration object from previous iterations of the configuration."
 msgstr ""
-
+"一个自增的对象，用来区早期的分副本集配置对象。"
 #: ../source/reference/replica-configuration.txt:60
 #: ../source/reference/replica-configuration.txt:137
 #: ../source/reference/replica-configuration.txt:153
 #: ../source/reference/replica-configuration.txt:205
 #: ../source/reference/replica-configuration.txt:323
 msgid "*Type*: boolean"
-msgstr ""
+msgstr "*Type*: 布尔类型"
 
 #: ../source/reference/replica-configuration.txt:62
 #: ../source/reference/replica-configuration.txt:139
 #: ../source/reference/replica-configuration.txt:207
 msgid "*Default*: false"
-msgstr ""
+msgstr "*Default*: false"
 
 #: ../source/reference/replica-configuration.txt:64
 msgid ""
@@ -101,30 +101,31 @@ msgid ""
 "servers. Set to ``true`` if the replica set is for a sharded cluster's "
 "config servers."
 msgstr ""
-
+"表示该复制集是否作为分片集群的配置服务器，如果该复制集是作为分片集群的配置服务器为``true`` 。"
 #: ../source/reference/replica-configuration.txt:68
 msgid ":ref:`3.2-rel-notes-sharded-cluster`"
-msgstr ""
+msgstr ":ref:`3.2-rel-notes-sharded-cluster`"
 
 #: ../source/reference/replica-configuration.txt:74
 msgid "*Type*: number"
-msgstr ""
+msgstr "*Type*: 数字类型"
 
 #: ../source/reference/replica-configuration.txt:76
 msgid "*Default*: 1 for new replica sets"
-msgstr ""
+msgstr "*Default*: 默认为1，代表是新的复制集"
 
 #: ../source/reference/replica-configuration.txt:78
 msgid ""
 "Version of the :ref:`replica set election protocol <3.2-rel-notes-rs-"
 "enhancements>`."
 msgstr ""
-
+" :ref:`replica set election protocol <3.2-rel-notes-rs-enhancements>`的版本号。"
 #: ../source/reference/replica-configuration.txt:81
 msgid ""
 "Set to ``1`` to enable the :ref:`replication election enhancements <3.2-rel-"
 "notes-rs-enhancements>` introduced in MongoDB 3.2."
 msgstr ""
+"设置为 ``1`` ，则启用了在MongoDB3.2介绍的 :ref:`replication election enhancements <3.2-rel-notes-rs-enhancements>` "
 
 #: ../source/reference/replica-configuration.txt:84
 msgid ""
@@ -133,21 +134,21 @@ msgid ""
 " members of a replica set configuration that specifies ``protocolVersion`` "
 "1."
 msgstr ""
-
+"默认情况下，在MongoDB 3.2 中使用``protocolVersion: 1``。之前的MongoDB版本使用协议0版本，不能作为 ``protocolVersion`` 为1的复制集成员。"
 #: ../source/reference/replica-configuration.txt:90
 msgid "``members``"
-msgstr ""
+msgstr "``members``"
 
 #: ../source/reference/replica-configuration.txt:94
 msgid "*Type*: array"
-msgstr ""
+msgstr "*Type*: array"
 
 #: ../source/reference/replica-configuration.txt:96
 msgid ""
 "An array of member configuration documents, one for each member of the "
 "replica set. The :rsconf:`members` array is a zero-indexed array."
 msgstr ""
-
+""
 #: ../source/reference/replica-configuration.txt:100
 msgid ""
 "Each member-specific configuration document can contain the following "
